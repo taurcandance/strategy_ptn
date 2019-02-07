@@ -1,16 +1,15 @@
 <?php
-
-use Math\Math;
-
 require_once '../vendor/autoload.php';
 
-const SUM       = 1;
-const COMPOSITE = 2;
+const BICYCLE = 1;
+const TAXI    = 2;
+const BUS     = 3;
 
-$result = new Math();
 
+$result = new calcTime();
+$road = 120;
 
-echo $result->getSum(2, 5, 3).'<br />';
-echo $result->getComposite(2, 5, 3);
-$obs = new SplObjectStorage();
+echo $a = $result->getTime(BUS, $road).'<br />';
+echo $b = $result->getTime(TAXI, $road).'<br />';
+echo $c = $result->getTime(BICYCLE, $road);
 
